@@ -227,7 +227,7 @@ When the TCP connection is disconnected unexpectedly, the Producer and the Super
 reconnect while in case of the Consumer/SuperstreamConsumer the client raises an event that needs to be managed:
 
 ```python
-async def on_connection_closed(disconnection_info: DisconnectionErrorInfo) -> None:
+async def on_connection_closed(disconnection_info: OnClosedErrorInfo) -> None:
     print(
         "connection has been closed from stream: "
         + str(disconnection_info.streams)
